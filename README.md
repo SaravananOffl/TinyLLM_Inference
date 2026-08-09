@@ -1,8 +1,6 @@
 # TinyLLM 
 
-TinyLLM is a from-scratch implementation of a small decoder-only language model, built to revisit the core components of modern LLMs end to end. Goal is to dive deeper into the inference implementations specifically.
-
-Plan is to cover the full pipeline—from tokenization and Transformer training to autoregressive generation and inference optimization—with an emphasis on understanding the underlying mechanics rather than relying on high-level model libraries.
+TinyLLM is a from-scratch implementation of a small decoder-only language model, built to revisit the core components of modern LLMs end to end. The primary focus is understanding LLM inference from first principles, including autoregressive decoding, KV caching, attention variants, and their latency and memory tradeoffs.
 
 ### Tokenization 
 
