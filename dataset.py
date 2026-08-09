@@ -58,7 +58,7 @@ going into the Transformer.
 """
 
 class TinyDataset(Dataset):
-    def __init__(self, all_tokens, tokens_y, context_length):
+    def __init__(self, all_tokens, context_length):
         self.all_tokens = torch.tensor(all_tokens, dtype=torch.long)
         self.context_length = context_length
 
@@ -67,7 +67,7 @@ class TinyDataset(Dataset):
 
     def __getitem__(self, idx):
         x = self.all_tokens[idx: idx+context_length]
-        y = self.tokens_y[idx+1: idx+self.context_length + 1] 
+        y = self.all_tokens[idx+1: idx+self.context_length + 1] 
         return x, y
 
 
